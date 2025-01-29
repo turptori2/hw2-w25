@@ -57,12 +57,15 @@ green: just class, border-side-width*/
 }
 
 /* element.class + border without width specificity */
-div.blue {
+.blue {
     color: #C4C4C4;
     background-color: #0000FF;
     text-align: left;
     margin-right: 50px;
-    border: 2px 5px 0 0;
+    border-right-width: 5px;
+    border-top-width: 2px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
 }
 
 div.blue > h2 {
