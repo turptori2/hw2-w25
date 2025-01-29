@@ -48,7 +48,6 @@ blue: div + class long border
 yellow: div + class, border-side-width
 green: just class, border-side-width*/
 
-/* change selector test */
 .red {
     background-color: #FF0000;
     text-align: right;
@@ -56,7 +55,6 @@ green: just class, border-side-width*/
     border-width: 0 0 2px 5px;
 }
 
-/* element.class + border without width specificity */
 .blue {
     color: #C4C4C4;
     background-color: #0000FF;
@@ -72,18 +70,9 @@ div.blue > h2 {
     color: #C4C4C4;
 }
 
-/* Yellow test DIV BORDER FAILED. Is it the div.class or is it the excluding border-top-width and border-bottom-width?
+/* element.class (div.yellow) works as well as .yellow (essentially the same -- div occupies the class and is defined */
 
-div.yellow {
-    background-color: #FFFF00;
-    text-align: right;
-    margin-left: 50px;
-    border-bottom-width: 2px;
-    border-left-width: 5px;
-}
-    use element.class vs .class, selects all div elements with class yellow */
-
-div.yellow {
+.yellow {
     background-color: #FFFF00;
     text-align: right;
     margin-left: 50px;
@@ -98,18 +87,19 @@ div.yellow p {
 }
 
 
-/* For learning -- GREEN DIV BORDER FAILED
-    Didn't include all border sides AKA missing border-left-width and border-bottom-width
+/* For learning -- GREEN DIV BORDER FAILED twice for the following reasons:
+1. Didn't include all border sides AKA missing border-left-width and border-bottom-width
 
-.green {
-    background-color: #008500;
-    text-align: left;
-    margin-right: 50px;
-    border-right-width: 5px;
-    border-top-width: 2px;
-}
+    .green {
+        background-color: #008500;
+        text-align: left;
+        margin-right: 50px;
+        border-right-width: 5px;
+        border-top-width: 2px;
+    }
 
-changed attribute from border-right: 5px solid white; */
+2. Border-right property was not defined correctly
+    from border-right: 5px solid white; */
 .green {
     background-color: #008500;
     text-align: left;
