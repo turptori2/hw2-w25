@@ -72,14 +72,25 @@ div.blue > h2 {
     color: #C4C4C4;
 }
 
-/* use element.class vs .class, selects all div elements with class yellow */
+/* Yellow test DIV BORDER FAILED. Is it the div.class or is it the excluding border-top-width and border-bottom-width?
+
 div.yellow {
     background-color: #FFFF00;
     text-align: right;
     margin-left: 50px;
-    /* change attribute from border-width to side specific */
     border-bottom-width: 2px;
     border-left-width: 5px;
+}
+    use element.class vs .class, selects all div elements with class yellow */
+
+div.yellow {
+    background-color: #FFFF00;
+    text-align: right;
+    margin-left: 50px;
+    border-bottom-width: 2px;
+    border-left-width: 5px;
+    border-top-width: 0px;
+    border-right-width: 0px;
 }
 
 div.yellow p {
@@ -87,7 +98,18 @@ div.yellow p {
 }
 
 
-/* changed attribute from border-right: 5px solid white; */
+/* For learning -- GREEN DIV BORDER FAILED
+    Didn't include all border sides AKA missing border-left-width and border-bottom-width
+
+.green {
+    background-color: #008500;
+    text-align: left;
+    margin-right: 50px;
+    border-right-width: 5px;
+    border-top-width: 2px;
+}
+
+changed attribute from border-right: 5px solid white; */
 .green {
     background-color: #008500;
     text-align: left;
